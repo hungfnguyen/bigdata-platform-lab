@@ -1,70 +1,58 @@
-# Big Data Docker Setup
+# k8s-bigdata
 
-This project sets up a local Big Data environment using Docker Compose. It includes essential services like Hadoop, Hive, Spark, Kafka, and more — ideal for students and data engineers who want to **learn, experiment, and build pipelines** using industry-standard tools.
+A hands-on platform engineering lab for learning Hadoop, Apache Spark, and
+Spark on Kubernetes.
 
----
+## Overview
 
-## Included Components
+This repository explores how Spark applications run across different execution
+environments, from local mode to cloud-hosted Kubernetes. It focuses on runtime
+internals, cluster deployment, resource management, debugging, and performance
+tuning.
 
-| Service        | Description                                                  |
-| -------------- | ------------------------------------------------------------ |
-| **Hadoop**     | HDFS with 1 NameNode and 2 DataNodes for distributed storage |
-| **Hive**       | Hive Metastore, HiveServer2, and MariaDB for SQL-on-HDFS     |
-| **Spark**      | Spark Master, Workers, Thrift Server, Jupyter Notebook       |
-| **Kafka**      | Kafka + Zookeeper + Schema Registry + Control Center         |
-| **SQL Server** | Optional Microsoft SQL Server instance for testing           |
+## Topics
 
----
+- HDFS and YARN fundamentals
+- Spark driver, executor, job, stage, and task lifecycle
+- Spark local, standalone, and YARN deployment modes
+- Spark on Kubernetes and Spark Operator
+- Kubernetes RBAC and resource management for Spark
+- Terraform-provisioned EC2 infrastructure with k3s
+- Spark performance tuning, benchmarking, and failure analysis
 
-## How to Use
+## Repository structure
 
-### 1. Requirements
-
-* Docker and Docker Compose installed
-* Create a shared external Docker network:
-
-```bash
-docker network create data_network
+```text
+.
+|-- docs/          Architecture, design decisions, and roadmap
+|-- hadoop/        HDFS and YARN labs
+|-- spark/         Spark runtimes, jobs, and tuning labs
+|-- kubernetes/    Kubernetes resources for Spark
+|-- terraform/     AWS EC2 and k3s infrastructure
+|-- data/          Reproducible workload fixtures
+`-- scripts/       Repository automation
 ```
 
-### 2. Start Services
+## Learning path
 
-Run the following commands from the project root to launch each stack:
-
-```bash
-docker-compose -f hadoop/docker-compose.yaml up -d
-docker-compose -f hive/docker-compose.yaml up -d
-docker-compose -f spark/docker-compose.yaml up -d
-docker-compose -f kafka/docker-compose.yml up -d
+```text
+Hadoop -> Spark Local -> Standalone -> YARN -> Kubernetes
+       -> Spark Operator -> EC2/k3s -> Benchmarking and Operations
 ```
 
-> You can start only the services you need depending on what you're learning.
+The same Spark workloads are reused across runtime modes to make their
+execution, resource usage, and failure behavior directly comparable.
 
----
+## Roadmap
 
-## Web Interfaces
+See [docs/roadmap.md](docs/roadmap.md) for the implementation phases and current
+progress.
 
-| Service              | URL                                            |
-| -------------------- | ---------------------------------------------- |
-| HDFS NameNode UI     | [http://localhost:9870](http://localhost:9870) |
-| Spark Master UI      | [http://localhost:8082](http://localhost:8082) |
-| Jupyter Notebook     | [http://localhost:8890](http://localhost:8890) |
-| Kafka Control Center | [http://localhost:9021](http://localhost:9021) |
-| Schema Registry      | [http://localhost:8081](http://localhost:8081) |
+```bash
+make help
+make roadmap
+```
 
----
+## Status
 
-## Use Cases
-
-This setup is perfect for learning:
-
-* HDFS file storage and management
-* Writing SQL queries with Hive
-* Building Spark jobs for batch or interactive processing
-* Streaming with Kafka
-* Integrating services like Hive ↔ Spark ↔ Kafka
-
----
-## Authors
-
-- **Hung Nguyen** – [@hungfnguyen](https://github.com/hungfnguyen)
+Under active development.

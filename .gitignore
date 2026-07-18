@@ -1,6 +1,30 @@
+.DS_Store
+.env
 .idea/
-hive/mariadb/
-services
-hive-test-hiveserver2
-spark/mariadb
-data/
+.vscode/
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+*.log
+*.pid
+
+# Runtime datasets are generated locally. Small committed fixtures are excepted.
+data/runtime/
+data/benchmarks/
+
+# Terraform local state and plans must never be committed.
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Local Kubernetes credentials.
+kubeconfig*
