@@ -10,3 +10,6 @@ and checksums.
 The planned domain workload uses a curated snapshot of Google's public Ethereum
 dataset. Spark runtimes will consume the resulting files rather than query
 BigQuery directly.
+
+See [Lab and Evidence Standard](../docs/standards/lab-and-evidence.md) for data
+reproducibility and benchmark requirements.

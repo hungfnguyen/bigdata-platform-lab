@@ -1,16 +1,8 @@
 # Apache Spark
 
-Spark is the primary engineering subject of this repository. Work progresses
-from execution internals to deployment and production-style debugging.
+Spark is the primary engineering subject of this repository. This domain owns
+shared jobs, runtime-specific submission configuration, JVM diagnostics, Spark
+UI evidence, performance experiments, and failure analysis.
 
-Planned runtime modes:
-
-1. Local
-2. Standalone
-3. YARN
-4. Kubernetes native submit
-5. Spark Operator
-
-The same application contract will be reused across runtime modes. Word count or
-Spark Pi may be used as smoke tests; a relational Ethereum snapshot will support
-ETL and tuning experiments.
+See [Spark Runtime Model](../docs/spark/runtime-model.md) for the supported
+cluster managers and workload contract.

@@ -5,22 +5,24 @@
 
 ## Context
 
-The previous repository combined Hadoop, Hive, Spark, Kafka, SQL Server, and
-notebook services. It demonstrated tool installation but did not provide enough
-depth in Spark execution, deployment, tuning, or operations.
+The `k8s-bigdata` repository needs a clear technical identity. Broad coverage of
+unrelated data tools would reduce the time available for Spark internals,
+cluster-runtime behavior, performance analysis, and platform operations.
 
 ## Decision
 
 Keep the repository name `k8s-bigdata` and focus implementation on Hadoop,
 Spark, Kubernetes, and Terraform-provisioned EC2 infrastructure.
 
-Hadoop provides HDFS and YARN foundations. Spark is the primary subject.
-Kubernetes and EC2 provide the platform environment used to deploy and operate
-Spark workloads.
+Hadoop provides the HDFS and YARN foundations needed to understand traditional
+Spark deployments. Spark is the primary subject. Kubernetes and EC2 provide the
+cloud-native environment used to deploy and operate Spark workloads.
 
 ## Consequences
 
-- Existing Hive, Kafka, SQL Server, and notebook stacks are removed.
 - New setup directories are created only when their implementation begins.
 - Shared workloads must remain portable across Spark runtime modes.
 - Datasets remain supporting fixtures rather than a new platform domain.
+- JVM knowledge is documented within Spark because it directly supports Spark
+  memory, garbage collection, serialization, and failure analysis.
+- A dedicated Hadoop cluster on EC2 is not part of the core repository scope.

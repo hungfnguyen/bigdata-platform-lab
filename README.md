@@ -24,7 +24,7 @@ tuning.
 
 ```text
 .
-|-- docs/          Architecture, design decisions, and roadmap
+|-- docs/          Project scope, architecture, and engineering standards
 |-- hadoop/        HDFS and YARN labs
 |-- spark/         Spark runtimes, jobs, and tuning labs
 |-- kubernetes/    Kubernetes resources for Spark
@@ -33,7 +33,7 @@ tuning.
 `-- scripts/       Repository automation
 ```
 
-## Learning path
+## Execution targets
 
 ```text
 Hadoop -> Spark Local -> Standalone -> YARN -> Kubernetes
@@ -43,14 +43,14 @@ Hadoop -> Spark Local -> Standalone -> YARN -> Kubernetes
 The same Spark workloads are reused across runtime modes to make their
 execution, resource usage, and failure behavior directly comparable.
 
-## Roadmap
+## Documentation
 
-See [docs/roadmap.md](docs/roadmap.md) for the implementation phases and current
-progress.
+See [docs/README.md](docs/README.md) for the project target, technical boundaries,
+runtime model, and lab quality standards.
 
 ```bash
 make help
-make roadmap
+make docs
 ```
 
 ## Status

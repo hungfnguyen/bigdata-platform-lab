@@ -1,8 +1,9 @@
 # Kubernetes
 
-This domain contains only the Kubernetes resources needed to deploy and operate
-Spark: local cluster configuration, namespaces, service accounts, RBAC, Spark
-submission resources, and operator configuration.
+This domain owns the Kubernetes resources required to deploy and operate Spark:
+cluster configuration, namespaces, service accounts, RBAC, pod resources,
+storage, native Spark submission, and operator configuration.
 
-The local cluster implementation will be selected and verified before its setup
-directory is added. The EC2 environment will use k3s.
+See [Kubernetes and Infrastructure](../docs/platform/kubernetes-and-infrastructure.md)
+for the boundary between Spark configuration, Kubernetes resources, and EC2
+provisioning.
