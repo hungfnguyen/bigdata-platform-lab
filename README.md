@@ -1,4 +1,4 @@
-# k8s-bigdata
+# bigdata-platform-lab
 
 A hands-on platform engineering lab for learning Hadoop, Apache Spark, and
 Spark on Kubernetes.

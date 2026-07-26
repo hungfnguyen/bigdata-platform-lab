@@ -2,7 +2,7 @@
 
 ## Identity
 
-`k8s-bigdata` is a focused Hadoop and Spark platform engineering lab. It exists
+`bigdata-platform-lab` is a focused Hadoop and Spark platform engineering lab. It exists
 to demonstrate understanding of distributed storage, Spark execution, cluster
 managers, Kubernetes-native operation, infrastructure automation, and
 performance diagnosis.

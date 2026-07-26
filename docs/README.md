@@ -1,12 +1,14 @@
 # Documentation
 
-These documents define what `k8s-bigdata` is intended to demonstrate and the
+These documents define what `bigdata-platform-lab` demonstrates and the
 boundaries that keep the repository focused.
 
 ## Project
 
 - [Target and Scope](project/target-and-scope.md): repository identity, target
   capabilities, inclusions, and exclusions.
+- [Learning Method](learning-method.md): the build, experiment, debugging, and
+  reflection loop used by the author.
 
 ## Technical models
 

@@ -2,7 +2,7 @@
 
 ## Role of Spark
 
-Spark is the central subject of `k8s-bigdata`. The repository studies how the
+Spark is the central subject of `bigdata-platform-lab`. The repository studies how the
 same application behaves when resource allocation, driver placement, executor
 lifecycle, logging, and failure handling are controlled by different runtimes.
 

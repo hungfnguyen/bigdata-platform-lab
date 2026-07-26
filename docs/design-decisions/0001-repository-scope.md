@@ -5,13 +5,13 @@
 
 ## Context
 
-The `k8s-bigdata` repository needs a clear technical identity. Broad coverage of
+The `bigdata-platform-lab` repository needs a clear technical identity. Broad coverage of
 unrelated data tools would reduce the time available for Spark internals,
 cluster-runtime behavior, performance analysis, and platform operations.
 
 ## Decision
 
-Keep the repository name `k8s-bigdata` and focus implementation on Hadoop,
+Use the repository name `bigdata-platform-lab` and focus implementation on Hadoop,
 Spark, Kubernetes, and Terraform-provisioned EC2 infrastructure.
 
 Hadoop provides the HDFS and YARN foundations needed to understand traditional
