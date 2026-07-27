@@ -53,6 +53,9 @@ make help
 make docs
 ```
 
+The first runnable environment is the
+[Hadoop Docker Compose cluster](hadoop/setups/01_docker_compose_cluster/README.md).
+
 ## Status
 
 Under active development.

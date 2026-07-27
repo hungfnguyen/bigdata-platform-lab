@@ -8,15 +8,15 @@ foundation, not the primary identity of the repository.
 
 ## Local topology
 
-The Hadoop lab targets two local execution models:
+The implemented model is one Docker Compose cluster:
 
-| Model | Processes | Purpose |
+| Profile | Processes | Purpose |
 | --- | --- | --- |
-| Pseudo-distributed | NameNode, DataNode, ResourceManager, NodeManager | Learn configuration and daemon responsibilities on one host. |
-| Docker Compose cluster | NameNode, three DataNodes, ResourceManager, NodeManagers, JobHistory Server | Model process isolation, replication, scheduling, and component failure. |
+| Default | NameNode and three DataNodes | Study storage, replication, and DataNode loss. |
+| `yarn` | HDFS plus ResourceManager, three NodeManagers, and JobHistory Server | Study scheduling, MapReduce, logs, and NodeManager loss. |
 
-The Compose cluster should use a shared definition with separate HDFS and YARN
-profiles instead of duplicating two almost identical environments.
+One definition avoids duplicating HDFS between separate labs. Pseudo-distributed
+mode remains a Hadoop concept, but does not need a separate runnable setup.
 
 ## Required knowledge
 
@@ -37,7 +37,8 @@ The lab must include observable failure scenarios:
 - Exercise safemode and document its effect on writes.
 - Run the balancer and explain when it is useful.
 - Stop a NodeManager during a job and inspect container/application behavior.
-- Submit Spark on YARN and collect driver and executor logs.
+- Submit Spark on YARN and collect driver and executor logs when the Spark
+  runtime is implemented.
 
 ## Production boundary
 
